@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" >
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	</head>
+
+	<body>
+
+		<script  type="text/javascript">
+   //    longestCollatz = function(value) {
+   //      var count = 1;
+   //      if (value === 1) {
+   //        count = 0;
+   //      } else if (value % 2 === 0) {
+   //        count = count + longestCollatz(value / 2);
+   //      } else {
+   //        count = count + longestCollatz(3 * value + 1);
+   //      }
+   //      return count;
+   //    };
+
+			// for(var i = 3, max = 0, maxNumver = 0; i < 1000000; i++) {
+			// 	if (max < longestCollatz(i)) {
+   //        max = longestCollatz(i);
+   //        maxNumber = i;
+			// 	}
+			// }
+
+      // while (Math.pow(2, 1000) - )
+    //   var array = [];
+    //   for (var sum = 0, bignumber = Math.pow(2, 1000), i = 1; Math.pow(10, i - 1) <= bignumber; i++) {
+				// sum += Math.floor(bignumber % Math.pow(10,i) / Math.pow(10,i - 1));
+				// array.push(Math.floor(bignumber % Math.pow(10,i) / Math.pow(10,i - 1)));
+    //   }
+    //   array = array.reverse().join("");
+    //   console.log(i, sum, array);
+      // var sum = 0;
+      // answer = "10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376";
+      // answer = answer.split("");
+      // answer.forEach(function(digit){ sum += parseInt(digit); });
+      // // answer.forEach(function(digit) {
+      // 	sum += digit.parseInt();
+      // });
+      var factorial = function(value) {
+        return value === 1 ? 1 : value * factorial(value - 1);
+      };
+
+      // NEED TO DO THIS IN C
+
+      var check = function(value) {
+        for(var countDown = value, divisible = 0; countDown ;countDown--) {
+          if (value % countDown === 0) {
+          	divisible++;
+          }
+        }
+        return divisible;
+      };
+
+			for (var max = 0, count = 0; max <= 200; count++) {
+				if (max < check(count)) {
+					max = check(count);
+				}
+			}
+			console.log(max, count);
+
+
+		</script>
+  </body>
+</html>
